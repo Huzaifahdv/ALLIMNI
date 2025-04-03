@@ -1,0 +1,25 @@
+@use './_variable' as v;
+
+.top-menu {
+    .navbar {
+        font-weight: bold;
+        padding: 0px 100px !important;
+        background-color: #fff !important;
+        .navbar-nav {
+            li > a {
+                    transition-property: background-color;
+                    transition-duration: 0.5s;
+                &:hover {
+                    color: v.$main-color !important;
+                    background-color: #fff;
+                    border-bottom: 1px solid v.$main-color;
+                }
+            }
+
+            .active a {
+                color: v.$main-color !important;
+                border-bottom: 1px solid v.$main-color;
+            }
+        }
+    }
+}
