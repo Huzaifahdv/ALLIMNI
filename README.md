@@ -1,4 +1,4 @@
-1- npx i
+1- npm i
 
 
 2- npx webpack
