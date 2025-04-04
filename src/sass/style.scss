@@ -1,25 +1,118 @@
 @use './_variable' as v;
 
 .top-menu {
-    .navbar {
-        font-weight: bold;
-        padding: 0px 100px !important;
-        background-color: #fff !important;
-        .navbar-nav {
-            li > a {
-                    transition-property: background-color;
-                    transition-duration: 0.5s;
-                &:hover {
-                    color: v.$main-color !important;
-                    background-color: #fff;
-                    border-bottom: 1px solid v.$main-color;
-                }
-            }
+  .navbar {
+    padding: 10px 100px !important;
+    background-color: v.$background-light !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
-            .active a {
-                color: v.$main-color !important;
-                border-bottom: 1px solid v.$main-color;
-            }
+    .navbar-nav {
+      li > a {
+        color: v.$text-dark;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: v.$text-light; 
+          background-color: v.$primary-dark;
         }
+      }
+
+      .active a {
+        color: v.$highlight-dark !important;
+        border-bottom: 2px solid v.$highlight-dark;
+      }
     }
+
+    .btn-primary {
+      background-color: v.$primary-color;
+      border: none;
+      font-weight: bold;
+      position: absolute;
+      left: 20px; 
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 5px 15px;
+
+      &:hover {
+        background-color: v.$secondary-color;
+        color: v.$text-light; 
+      }
+    }
+  }
 }
+
+.carousel-top {
+  .row {
+    display: block !important;
+  }
+
+  .carousel {
+    .carousel-item {
+      img {
+        height: 550px;
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        background-color: rgba(v.$carousel-overlay, 0.7);
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: flex !important;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+    }
+
+    .carousel-indicators {
+      li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 20px 5px 0 0;
+
+        &.active {
+          background-color: v.$primary-color;
+        }
+
+        &:hover {
+          background-color: v.$highlight-color;
+        }
+      }
+    }
+
+    .carousel-caption {
+      h1 {
+        font-weight: bold;
+        color: v.$text-light;
+        margin-bottom: 30px;
+        font-size: 2.5rem; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      h4 {
+        width: 70%;
+        color: v.$text-secondary;
+        text-align: center;
+        font-size: 1.25rem;
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      span {
+        background-color: v.$primary-dark;
+        border-radius: 50%; 
+        &:hover {
+          background-color: v.$secondary-dark;
+        }
+      }
+    }
+  }
+}
+

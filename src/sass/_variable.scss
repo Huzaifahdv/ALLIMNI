@@ -1,2 +1,29 @@
-$main-color: #3498db;
-$secondary-color: #2ecc71;
+// الألوان الأساسية
+$primary-color: #3498db; // الأزرق الفاتح للتعليم والثقة
+$primary-dark: #2176bd; // الأزرق الداكن للتفاعل أو العناصر البارزة
+$secondary-color: #2ecc71; // الأخضر الفاتح للنمو والتفاؤل
+$secondary-dark: #1d9d56; // الأخضر الداكن للأزرار أو التفاعل
+$highlight-color: #f1c40f; // الأصفر الزاهي للإبداع
+$highlight-dark: #cfa009; // الأصفر الداكن للتفاعل البصري
+
+// ألوان الخلفيات
+$background-light: #ffffff; // الأبيض للنظافة والوضوح
+$background-dark: #f8f9fa; // رمادي فاتح كخلفية ثانوية
+$background-secondary: #eaf4fc; // أزرق خفيف لتقسيم الأقسام أو كظل خلفية
+
+// ألوان النصوص
+$text-dark: #2c3e50; // الرمادي الداكن للنصوص الأساسية
+$text-light: #ffffff; // الأبيض للنصوص البارزة
+$text-secondary: #6c757d; // الرمادي الفاتح للنصوص الثانوية أو التوضيحية
+
+// ألوان الحدود
+$border-light: #e4e6eb; // رمادي فاتح للحدود أو الفصل بين الأقسام
+$border-dark: #bdc3c7; // رمادي داكن للتحديد الواضح
+
+// ألوان إضافية خاصة بالـ carousel
+$carousel-overlay: rgba(0, 0, 0, 0.5); // لون التعتيم في الـ carousel
+$carousel-highlight: #ffa502; // لون مميز لتسليط الضوء في الصور
+
+// ألوان زر تسجيل الدخول
+$button-primary-hover: $secondary-color; // الأخضر للتفاعل مع الزر
+$button-text-hover: $text-light; // النص الأبيض عند تفاعل الزر
