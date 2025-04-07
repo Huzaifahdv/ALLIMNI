@@ -3,3 +3,8 @@ import "@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css";
 import 'jquery/dist/jquery.min.js';
 import 'popper.js/dist/popper.min';
 import '../sass/style.scss';
+
+
+
+
+document.getElementById('fullYear').innerHTML = new Date().getFullYear();

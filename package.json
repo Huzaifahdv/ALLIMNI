@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --mode development",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
+    "preview": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --mode production --open"
   },
   "keywords": [],
   "author": "",
@@ -31,5 +34,8 @@
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2"
   }
 }
