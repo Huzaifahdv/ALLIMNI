@@ -1,20 +1,20 @@
 @use "sass:color";
 
 // الألوان الأساسية
-$primary-color: #ff6f61;       // وردي دافئ وودود
+$primary-color: #ff6f61;
 $primary-dark: #e85c50;
 $primary-light: color.adjust($primary-color, $lightness: 10%);
 
-$secondary-color: #42b983;     // أخضر زمردي مريح
+$secondary-color: #42b983;   
 $secondary-dark: #379d6d;
 
-$highlight-color: #f4d35e;     // أصفر دافئ للتمييز
+$highlight-color: #f4d35e;  
 $highlight-dark: #cfae40;
 
 // الخلفيات
 $background-light: #ffffff;
 $background-dark: #f9fafc;
-$background-secondary: #fef6f0; // بيج خفيف دافي
+$background-secondary: #fef6f0; 
 
 // النصوص
 $text-dark: #2e2e2e;
