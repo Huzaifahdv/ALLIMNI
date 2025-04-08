@@ -1,0 +1,118 @@
+@use './_variable' as v;
+
+.login-page {
+    background-color: v.$background-light;
+    font-family: 'Tajawal', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+    .back-home {
+      direction: rtl;
+  
+      a {
+        font-size: 0.9rem;
+        border-radius: 8px;
+        font-weight: 500;
+        color: v.$primary-color;
+        border-color: v.$primary-color;
+  
+        &:hover {
+          background-color: v.$primary-color;
+          color: white;
+        }
+      }
+    }
+  
+    .login-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+  
+      .login-box {
+        background-color: v.$background-dark;
+        border-radius: 12px;
+        padding: 30px 25px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+        .login-title {
+          text-align: center;
+          color: v.$primary-color;
+          margin-bottom: 25px;
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+  
+        form {
+          .form-group {
+            margin-bottom: 20px;
+  
+            label {
+              display: block;
+              margin-bottom: 8px;
+              color: v.$text-dark;
+              font-weight: 500;
+            }
+  
+            .form-control {
+              width: 100%;
+              padding: 10px 12px;
+              border-radius: 8px;
+              border: 1px solid v.$primary-light;
+              background-color: v.$background-light;
+              color: v.$text-dark;
+              transition: border 0.3s ease;
+  
+              &:focus {
+                border-color: v.$primary-color;
+                outline: none;
+              }
+            }
+          }
+  
+          .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: v.$primary-color;
+            color: v.$text-light;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+  
+            &:hover {
+              background-color: v.$secondary-color;
+            }
+          }
+        }
+  
+        .login-footer {
+          p {
+            color: v.$text-secondary;
+            font-size: 0.95rem;
+  
+            a {
+              color: v.$highlight-color;
+              font-weight: 500;
+  
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+  
+          // responsive
+          @media (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+    }
+}
+
+  
