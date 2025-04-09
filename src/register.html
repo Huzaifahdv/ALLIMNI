@@ -15,21 +15,33 @@
     <div class="register-box shadow-lg">
       <h2 class="register-title">تسجيل حساب جديد</h2>
       <form>
-        <div class="form-group">
+        <div class="form-group input-icon">
           <label for="name">الاسم الكامل</label>
-          <input type="text" id="name" class="form-control" placeholder="مثال: محمد أحمد" required />
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" class="form-control" placeholder="مثال: محمد أحمد" required />
+          </div>
         </div>
-        <div class="form-group">
+        <div class="form-group input-icon">
           <label for="email">البريد الإلكتروني</label>
-          <input type="email" id="email" class="form-control" placeholder="example@email.com" required />
+          <div class="input-wrapper">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" class="form-control" placeholder="example@email.com" required />
+          </div>
         </div>
-        <div class="form-group">
+        <div class="form-group input-icon">
           <label for="password">كلمة المرور</label>
-          <input type="password" id="password" class="form-control" placeholder="********" required />
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" class="form-control" placeholder="********" required />
+          </div>
         </div>
-        <div class="form-group">
+        <div class="form-group input-icon">
           <label for="confirm-password">تأكيد كلمة المرور</label>
-          <input type="password" id="confirm-password" class="form-control" placeholder="********" required />
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="confirm-password" class="form-control" placeholder="********" required />
+          </div>
         </div>
         <button type="submit" class="btn btn-register">سجل الآن</button>
       </form>

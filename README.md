@@ -1,7 +1,7 @@
 1- npm i
 
 
-2- npx webpack
+2- npm run dev
 
 
-3- npx webpack serve
+3- npx run build

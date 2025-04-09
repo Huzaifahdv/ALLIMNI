@@ -84,6 +84,14 @@ module.exports = {
             template: "./src/register.html",
             filename: "register.html"
         }),
+        new HtmlWebpackPlugin({
+            template: "./src/student-page1.html",
+            filename: "student-page1.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/student-page2.html",
+            filename: "student-page2.html"
+        }),
         new MiniCssExtractPlugin({ filename: "styles.css" }),
         new CleanWebpackPlugin()
     ],

@@ -73,6 +73,32 @@
               }
             }
           }
+
+          .input-icon {
+            margin-bottom: 20px;
+          
+            .input-wrapper {
+              position: relative;
+          
+              i {
+                position: absolute;
+                top: 50%;
+                right: 15px; // عدّلها حسب اتجاه الصفحة، يسار لو LTR
+                transform: translateY(-50%);
+                color: v.$text-secondary;
+                font-size: 18px;
+                pointer-events: none;
+              }
+          
+              input {
+                width: 100%;
+                padding: 10px 15px;
+                padding-right: 40px; // مساحة للأيقونة
+                border: 1px solid #ccc;
+                border-radius: 8px;
+              }
+            }
+          }          
   
           .btn-register {
             width: 100%;
