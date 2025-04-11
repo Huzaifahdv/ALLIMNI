@@ -8,3 +8,6 @@
 
 
 4- npm run preview
+
+
+Some icons were used from Noun Project
