@@ -10,7 +10,6 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
     },
-    mode: "development",
     module: {
         rules: [
             {
@@ -45,6 +44,34 @@ module.exports = {
                 generator: {
                     filename: "assets/images/[name][ext]",
                 },
+                use: [
+                    {
+                        loader: "image-webpack-loader",
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65, 
+                            },
+                            optipng: {
+                                enabled: true,
+                            },
+                            pngquant: {
+                                quality: [0.6, 0.8], 
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            svgo: {
+                                plugins: [
+                                    {
+                                        removeViewBox: false,
+                                    },
+                                ],
+                            },
+                        },
+                    },
+                ],
             },
             {
                 test: /\.html$/i,
@@ -107,5 +134,8 @@ module.exports = {
         },
         hot: true,
         open: true,
-    }
+    },
+    performance: {
+        hints: false,
+    },
 };

@@ -4,4 +4,7 @@
 2- npm run dev
 
 
-3- npx run build
+3- npm run build
+
+
+4- npm run preview
