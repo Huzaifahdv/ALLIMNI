@@ -120,7 +120,6 @@ module.exports = {
             filename: "student-page2.html"
         }),
         new MiniCssExtractPlugin({ filename: "styles.css" }),
-        new CleanWebpackPlugin()
     ],
     devServer: {
         static: {
