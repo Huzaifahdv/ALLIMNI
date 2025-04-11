@@ -1,8 +1,39 @@
 @use './_variable' as v;
 
+// ألوان القائمة الفرعية
+$breadcrumb-bg: v.$background-dark;
+$breadcrumb-color: v.$text-secondary;
+$breadcrumb-hover-color: v.$primary-color;
+$breadcrumb-active-color: v.$text-dark;
+// ألوان قسم معلومات الطالب
+$student-card-bg: v.$background-light;
+$student-card-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+$student-img-border: 6px solid v.$primary-color;
+$student-img-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$student-rank-color: v.$secondary-color;
+$student-details-color: v.$text-secondary;
+// ألوان قسم معدلات الطالب
+$grades-table-bg: v.$background-light;
+$grades-table-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+$grades-table-border: 1px solid v.$border-light;
+$grades-table-header-color: v.$text-light;
+$grades-table-header-bg: v.$primary-color;
+$grades-table-text-color: v.$text-dark;
+$grades-table-footer-bg: v.$background-secondary;
+$grades-table-footer-text-color: v.$text-dark;
+$grades-table-footer-border: 2px solid v.$border-dark;
+// ألوان قسم النصائح
+$tip-bg: v.$background-secondary;
+$tip-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+$tip-title-color: v.$primary-color;
+$tips-list-bg: v.$background-light;
+$tips-list-border-left: 5px solid v.$highlight-color;
+
+
+
 // القائمة الفرعية
 .breadcrumb-wrapper {
-  background-color: v.$background-dark;
+  background-color: $breadcrumb-bg;
   padding: 15px 30px;
   margin-top: 10px;
 
@@ -14,24 +45,25 @@
   
     .breadcrumb-item + .breadcrumb-item::before {
       content: ">";
-      color: v.$text-secondary;
+      color: $breadcrumb-color;
       margin: 0 8px;
     }
   
     a {
-      color: v.$primary-color;
+      color: $breadcrumb-color;
       text-decoration: none;
   
       &:hover {
-        color: v.$primary-dark;
+        color: $breadcrumb-hover-color;
       }
     }
   
     .active {
-      color: v.$text-dark;
+      color: $breadcrumb-active-color;
     }
   }
 }
+
 // قسم معلومات الطالب
 .student-profile {
   padding: 60px 0;
@@ -39,8 +71,8 @@
   .student-card {
     display: flex;
     flex-wrap: wrap;
-    background: v.$background-light;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    background: $student-card-bg;
+    box-shadow: $student-card-shadow;
     border-radius: 20px;
     overflow: hidden;
     padding: 30px;
@@ -58,8 +90,8 @@
         height: 200px;
         object-fit: cover;
         border-radius: 50%;
-        border: 6px solid v.$primary-color;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: $student-img-border;
+        box-shadow: $student-img-shadow;
       }
     }
 
@@ -78,7 +110,7 @@
       
         .student-rank {
           font-size: 1.3rem;
-          color: v.$secondary-color;
+          color: $student-rank-color;
           margin-bottom: 20px;
           font-weight: 600;
         }
@@ -90,7 +122,7 @@
           li {
             margin-bottom: 10px;
             font-size: 1rem;
-            color: v.$text-secondary;
+            color: $student-details-color;
             padding-left: 15px;
             position: relative;
           }
@@ -103,8 +135,8 @@
 .grades-table {
     width: 100%;
     border-collapse: collapse;
-    background: v.$background-light;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background: $grades-table-bg;
+    box-shadow: $grades-table-shadow;
     border-radius: 10px;
     overflow: hidden;
   
@@ -112,42 +144,42 @@
     td {
       padding: 15px;
       text-align: center;
-      border-bottom: 1px solid v.$border-light;
+      border-bottom: $grades-table-border;
     }
   
     th {
-      background-color: v.$primary-color;
-      color: v.$text-light;
+      background-color: $grades-table-header-bg;
+      color: $grades-table-header-color;
       font-weight: bold;
     }
   
     td {
-      color: v.$text-dark;
+      color: $grades-table-text-color;
     }
 
     tfoot {
         td {
-            background-color: v.$background-secondary;
-            color: v.$text-dark;
+            background-color: $grades-table-footer-bg;
+            color: $grades-table-footer-text-color;
             font-weight: bold;
             font-size: 1.1rem;
-            border-top: 2px solid v.$border-dark;
+            border-top: $grades-table-footer-border;
         }
     }
 }
 // قسم النصائح
 .tips-section {
   margin-top: 60px;
-  background-color: v.$background-secondary;
+  background-color: $tip-bg;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: $tip-shadow;
   transition: all 0.3s ease;
 
   .section-title {
     font-size: 1.6rem;
     margin-bottom: 25px;
-    color: v.$primary-dark;
+    color: $tip-title-color;
     font-weight: bold;
     text-align: center;
   }
@@ -160,8 +192,8 @@
       li {
         margin-bottom: 15px;
         padding: 12px 20px;
-        background-color: v.$background-light;
-        border-left: 5px solid v.$highlight-color;
+        background-color: $tips-list-bg;
+        border-left: $tips-list-border-left;
         border-radius: 8px;
         color: v.$text-dark;
         font-size: 1rem;

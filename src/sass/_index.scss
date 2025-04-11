@@ -1,5 +1,20 @@
 @use './_variable' as v;
 
+// ألوان القائمة العلوية
+$navbar-bg: v.$background-light;
+$navbar-text: v.$text-dark;
+$navbar-hover-bg: v.$primary-color;
+$navbar-hover-text: v.$text-light;
+$navbar-active-bg: v.$highlight-dark;
+$navbar-active-border: 2px solid v.$highlight-dark;
+$logo-color: v.$primary-color;
+$logo-text-color: v.$primary-color;
+$navbar-btn-bg: v.$primary-color;
+$navbar-btn-hover-bg: v.$secondary-color;
+$navbar-btn-hover-text: v.$text-light;
+// ألوان الكاروسل
+$carousel-overlay-bg: rgba(v.$carousel-overlay, 0.7);
+
 svg {
     width: 100%;
     height: 100%;
@@ -10,24 +25,24 @@ svg {
 .top-menu {
     .navbar {
         padding: 10px 100px !important;
-        background-color: v.$background-light !important;
+        background-color: $navbar-bg !important;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
         .navbar-nav {
             li>a {
-                color: v.$text-dark;
+                color: $navbar-text !important;
                 font-weight: bold;
                 transition: all 0.3s ease-in-out;
 
                 &:hover {
-                    color: v.$text-light;
-                    background-color: v.$primary-color;
+                    color: $navbar-hover-text ;
+                    background-color: $navbar-hover-bg !important;
                 }
             }
 
             .active a {
-                color: v.$highlight-dark !important;
-                border-bottom: 2px solid v.$highlight-dark;
+                color: $navbar-active-bg !important;
+                border-bottom: $navbar-active-border;
             }
         }
 
@@ -35,7 +50,7 @@ svg {
             .logo-icon {
                 width: 50px;
                 height: 50px;
-                color: v.$highlight-color; // لون الشعار العام
+                color: $logo-color; // لون الشعار العام
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -43,7 +58,7 @@ svg {
 
             .logo-text {
                 font-size: 24px;
-                color: v.$highlight-color;
+                color: $logo-text-color; // لون نص الشعار
                 font-weight: 700;
                 margin-inline-start: 12px; // بدل ml-2 ليتماشى مع RTL
                 font-family: 'Tajawal', sans-serif;
@@ -52,7 +67,7 @@ svg {
 
 
         .btn-primary {
-            background-color: v.$primary-color;
+            background-color: $navbar-btn-bg !important;
             border: none;
             font-weight: bold;
             position: absolute;
@@ -62,8 +77,8 @@ svg {
             padding: 5px 15px;
 
             &:hover {
-                background-color: v.$secondary-color !important;
-                color: v.$text-light;
+                background-color: $navbar-btn-hover-bg !important;
+                color: $navbar-btn-hover-text !important;
             }
         }
     }
@@ -84,7 +99,7 @@ svg {
 
             .overlay {
                 position: absolute;
-                background-color: rgba(v.$carousel-overlay, 0.7);
+                background-color: $carousel-overlay-bg;
                 top: 0;
                 right: 0;
                 height: 100%;
